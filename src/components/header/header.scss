@@ -1,0 +1,21 @@
+@import '../../styles/_variables';
+.header-container {
+  background: $background-dark;
+  box-shadow: 0px 2px 4px -1px $box-shadow2, 0px 4px 5px 0px $box-shadow1,
+    0px 1px 10px 0px $box-shadow;
+  height: 75px;
+  width: 80%;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 0 20%;
+  padding: 0 2%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  span {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+}

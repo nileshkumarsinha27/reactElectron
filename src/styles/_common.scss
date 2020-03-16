@@ -1,0 +1,18 @@
+@import './variables';
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.layout-container {
+  position: relative;
+}

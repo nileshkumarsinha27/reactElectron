@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+.navigation-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  min-height: 100vh;
+  p {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid $border-color;
+  }
+  .navigation-list {
+    border-right: 1px solid $border-color;
+    height: 100%;
+  }
+  .navigation-list-item {
+    @include nav-list-font-style();
+    a {
+      width: 100%;
+      padding: 10px 0;
+      display: block;
+      text-align: center;
+      &.active-nav {
+        font-weight: bold;
+      }
+    }
+  }
+}

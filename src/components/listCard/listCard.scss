@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+.list-card-container {
+  width: 90%;
+  box-shadow: 0 0 31px 0 $box-shadow1;
+  margin: 10px 0;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  p {
+    padding: 0 0 10px;
+  }
+  .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title-span {
+      font-weight: bold;
+    }
+  }
+  .card-headline {
+    color: $background-dark;
+    font-weight: bold;
+  }
+  .card-description {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    img {
+      margin: 0 20px 0 0;
+      display: inline-block;
+      width: 210px;
+      height: 140px;
+    }
+    .description {
+      display: flex;
+      flex-direction: column;
+    }
+    .by-line {
+      font-weight: bold;
+      padding: 10px 0;
+    }
+  }
+}
