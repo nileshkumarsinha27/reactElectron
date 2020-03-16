@@ -1,25 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import rootReducers from './rootReducer';
 import RootSaga from './rootSaga';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import CONSTANTS from './constants';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   rootReducers,
-  compose(
-    applyMiddleware(sagaMiddleware),
-    window.devToolsExtension &&
-      process.env.NODE_ENV !== CONSTANTS.NODE_ENVIRONMENT.PROD
-      ? window.devToolsExtension()
-      : f => f
-  )
+  composeWithDevTools(applyMiddleware(sagaMiddleware))
 );
 
 sagaMiddleware.run(function*() {
